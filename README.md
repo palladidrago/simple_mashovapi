@@ -8,7 +8,7 @@ A simple usage example:
 import 'package:mashovapi/mashovapi.dart';
 
 main() {
-  var Controller =  Cotroller();
+  var Controller = Coךtroller();
   await Controller.login("username", "password" , "semel", "year")
   grades = await Controller.getGradeList(); //Returns list of Grades
   print(grades[1]);

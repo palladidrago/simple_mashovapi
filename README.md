@@ -1,4 +1,4 @@
-A mashov library in dart. Work in progress. 
+A mashov library in dart, So far only returns a list of grades.
 
 ## Usage
 
@@ -14,3 +14,8 @@ main() {
   print(grades[1]);
 }
 ```
+ ## Todo 
+ * Mashov Moodle integration.
+ * Return bagrut grades.
+ * Get the mail.
+ * List of features to implement.

@@ -8,7 +8,7 @@ class Base {
   String password;
   String semel;
   String year;
-  static var login;
+  var login;
 
   dynamic log() async {
     var data = {

@@ -20,7 +20,7 @@ class Controller {
   Future<List<dynamic>> getGradesRaw() async {
     //Returns a list of grades, in raw "json" (It's actually a map<string,dynamic).
     var headers = await base.getHeaders();
-    var response = await http.get('${studentUrl}grades', headers: headers);
+    var response = await http.get('${studentUrl}grades', headers:headers);
     var gradeList = json.decode(response.body);
     return gradeList;
   }

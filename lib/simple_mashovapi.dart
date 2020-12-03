@@ -4,6 +4,3 @@
 library simple_mashovapi;
 
 export 'src/wrapper.dart';
-export 'src/base.dart';
-
-// TODO: Export any libraries intended for clients of this package.

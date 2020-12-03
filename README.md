@@ -11,7 +11,7 @@ main() {
   var controller = Controller();
   await controller.login("username", "password" , "semel", "year");
   var grades = await controller.getGradeList(); //Returns list of Grades
-  print(grades[1]);
+  print(grades[1].grade);
 }
 ```
  ## Todo 

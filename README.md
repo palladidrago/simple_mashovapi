@@ -5,7 +5,7 @@ A mashov library in dart, So far only returns a list of grades.
 A simple usage example:
 
 ```dart
-import 'package:mashovapi/mashovapi.dart';
+import 'package:simple_mashovapi/simple_mashovapi.dart';
 
 main() {
   var controller = Controller();

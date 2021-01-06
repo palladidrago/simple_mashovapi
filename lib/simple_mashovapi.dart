@@ -4,3 +4,4 @@
 library simple_mashovapi;
 
 export 'src/wrapper.dart';
+export 'src/models.dart';

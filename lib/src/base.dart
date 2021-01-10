@@ -4,13 +4,14 @@ import 'dart:convert';
 //Gets the basic stuff needed to utilize the mashov api.
 class Base {
   Dio dio = Dio();
-  String username;
-  String password;
-  String semel;
-  String year;
-  var login;
+  String username; //username
+  String password; //password
+  String semel; //semel(school identifier)
+  String year; //school year(this year is 2021)
+  var login; //login response, contains cookie, xcsrf token, user id and a bunch of other stuff
 
   dynamic log() async {
+    //Logs into the mashov
     var data = {
       'username': username,
       'password': password,
@@ -21,7 +22,11 @@ class Base {
   }
 
   Base(this.username, this.password, this.semel, this.year) {
+    //Constructor for mashovapi base.
     login = log();
+  }
+  Future<dynamic> getLogin() async{
+    return await login;
   }
 
   Future<String> getUserId() async {

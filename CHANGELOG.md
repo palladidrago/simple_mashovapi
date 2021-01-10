@@ -6,4 +6,12 @@
 
 - Updated todo.
 
+## 0.0.3
+
+- Exported models.
+
+## 0.0.4
+
+- Added name getter.
+
 

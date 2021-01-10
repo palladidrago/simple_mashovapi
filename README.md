@@ -12,11 +12,13 @@ main() {
   await controller.login("username", "password" , "semel", "year");
   var grades = await controller.getGradeList(); //Returns list of Grades
   print(grades[1].grade);
+  var name = await controller.getName();
+  print(name.firstName+name.lastName);
 }
 ```
  ## Todo 
+ * Get class, hakbatsa from Mashov.
  * Mashov Moodle integration.
  * Return bagrut grades.
  * Get the mail.
- * List of features to implement.
  * Use only 1 http client.

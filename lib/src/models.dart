@@ -14,7 +14,6 @@ class Grade {
       this.teacherName,
       this.groupName,
       this.gradingEvent});
-}
 /*
 {
 "grade":100
@@ -25,3 +24,9 @@ class Grade {
 "gradingEvent":"מבחן 1",
 "gradeType":"*מבחן"}
 */
+}
+ 
+class Name{
+  String firstName,lastName;
+  Name(this.firstName,this.lastName);
+}

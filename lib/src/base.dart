@@ -18,11 +18,7 @@ class Base {
       'semel': semel,
       'year': year
     };
-    try {
-      return await dio.post('https://web.mashov.info/api/login', data: data);
-    } catch (e) {
-      return false;
-    }
+    return await dio.post('https://web.mashov.info/api/login', data: data);
   }
 
   Base(this.username, this.password, this.semel, this.year) {

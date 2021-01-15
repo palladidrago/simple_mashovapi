@@ -18,21 +18,25 @@ class Base {
       'semel': semel,
       'year': year
     };
-    return await dio.post('https://web.mashov.info/api/login', data: data);
+    try {
+      return await dio.post('https://web.mashov.info/api/login', data: data);
+    } catch (e) {
+      return false;
+    }
   }
 
   Base(this.username, this.password, this.semel, this.year) {
     //Constructor for mashovapi base.
     login = log();
   }
-  Future<dynamic> getLogin() async{
+  Future<dynamic> getLogin() async {
     return await login;
   }
 
   Future<String> getUserId() async {
     //Get the user id from the login response
     var loginComplete = await login;
-    Map<String,dynamic> map = json.decode(json.encode(loginComplete.data));
+    Map<String, dynamic> map = json.decode(json.encode(loginComplete.data));
     return map['credential']['userId'].toString();
   }
 

@@ -32,7 +32,7 @@ class Base {
   Future<String> getUserId() async {
     //Get the user id from the login response
     var loginComplete = await login;
-    Map<String, dynamic> map = json.decode(json.encode(loginComplete.data));
+    Map<String, dynamic> map = loginComplete.data;
     return map['credential']['userId'].toString();
   }
 

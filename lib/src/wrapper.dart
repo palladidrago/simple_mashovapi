@@ -1,28 +1,28 @@
 import 'package:simple_mashovapi/src/base.dart';
 import 'package:simple_mashovapi/src/models.dart';
-import 'package:http/http.dart' as http;
+import 'package:dio/dio.dart';
 import 'dart:convert';
 
 //Wrapper around the various api calls.
 class Controller {
   //Utilities for the Mashov api
+  Dio dio = Dio();
   static String userId;
   Base base;
   String studentUrl, userUrl;
   Future<void> login(String username, String password, String semel, String year) async {
     //Login into the mashov
-    base = await Base(username, password, semel, year); // Creates a Base intance.
+    base = await Base(username, password, semel, year); // Creates a Base instance.
     userId = await base.getUserId(); 
+    dio.options.headers = await base.getHeaders();
     studentUrl = 'https://web.mashov.info/api/students/${userId}/';
     userUrl = 'https://web.mashov.info/api/user/${userId}/';
   }
 
   Future<List<dynamic>> _getGradesRaw() async {
     //Returns a list of grades, in raw "json" (It's actually a map<string,dynamic).DONT USE
-    var headers = await base.getHeaders();
-    var response = await http.get('${studentUrl}grades', headers:headers);
-    var gradeList = json.decode(response.body);
-    return gradeList;
+    var response = await dio.get('${studentUrl}grades');
+    return response.data;
   }
 
   Future<List<Grade>> getGradeList() async {

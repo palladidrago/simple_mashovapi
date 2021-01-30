@@ -21,4 +21,3 @@ main() {
  * Mashov Moodle integration.
  * Return bagrut grades.
  * Get the mail.
- * Use only 1 http client.

@@ -14,4 +14,8 @@
 
 - Added name getter.
 
+## 0.0.5
+
+- Remove dependency on 2 http clients.
+
 

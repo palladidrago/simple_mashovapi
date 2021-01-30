@@ -25,14 +25,14 @@ class Base {
     //Constructor for mashovapi base.
     login = log();
   }
-  Future<dynamic> getLogin() async{
+  Future<dynamic> getLogin() async {
     return await login;
   }
 
   Future<String> getUserId() async {
     //Get the user id from the login response
     var loginComplete = await login;
-    Map<String,dynamic> map = json.decode(json.encode(loginComplete.data));
+    Map<String, dynamic> map = json.decode(json.encode(loginComplete.data));
     return map['credential']['userId'].toString();
   }
 

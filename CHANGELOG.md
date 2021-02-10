@@ -22,4 +22,8 @@
 
 - Actually remove dependency on 2 http clients.
 
+## 0.0.7
+
+- Improve dart score.
+
 

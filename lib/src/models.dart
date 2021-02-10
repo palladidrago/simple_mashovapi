@@ -1,8 +1,8 @@
 class Grade {
-  int grade; //Actual grade
-  int id; //Grade id
-  String subjectName, teacherName, groupName; //Subect name ,teacher name, Group(Hakbatsa) name
-  String eventDate; //Test date i  assume
+  int grade; ///Actual grade
+  int id; ///[Grade] id
+  String subjectName, teacherName, groupName; ///Subect name ,teacher name, Group(Hakbatsa) name
+  String eventDate; ///Test date i  assume
   String gradingEvent, gradeType; //gradingEvent: מבחן1 gradeType: Test, etc
 
   Grade(
@@ -27,6 +27,7 @@ class Grade {
 }
  
 class Name{
+  ///Name class
   String firstName,lastName;
   Name(this.firstName,this.lastName);
 }
